@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <title>Palfynux Official Repository</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <!--<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.0.min.js"></script>-->
+	<!--[if IE]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body class="container">
+  <h1>Palfynux Official Repository</h1>
+  <p>A repó hozzáadásához appendáld a következőt a /etc/pacman.conf konfigurációs fájlba:</p>
+  <p>
+    <code>
+      [palfynux] <br>
+      Server = http://easimer.tk:8080/palfynux/repo/$arch
+    </code>
+  </p>
+  <p>Palfynux alaprendszer telepítése:</p>
+  <code>
+    # pacman-key --init ## Kulcstartó inicializálása<br>
+    # pacman-key --populate archlinux ## Kulcstartó megtöltése mesterkulcsokkal<br>
+    # dirmngr &lt; /dev/null<br>
+    # pacman-key -r BC07F417 ## Kulcs hozzáadása a kulcstartóhoz<br>
+    # pacman-key --lsign-key BC07F417 ## Kulcs helyi aláírása<br>
+    # pacman -Syuu<br>
+    # pacman -S palfynux
+  </code>
+  <p>
+    A csomag tartalmazza a következő programokat:<br>
+  </p><ul>
+    <li>LibreOffice</li>
+    <li>Evince PDF olvasó</li>
+    <li>Code::Blocks</li>
+    <li>Python</li>
+    <li>Fritzing</li>
+    <li>Arduino IDE</li>
+    <li>Chromium</li>
+    <li>PuTTY</li>
+    <li>VLC Media Player</li>
+    <li>Icarus Verilog</li>
+    <li>KiCAD</li>
+    <li>Eagle</li>
+    <li>OpenSSH</li>
+  </ul>
+  <p></p>
+  <p>Hamarosan érkezik még: LXDE, Tina, MicroC és az ALTERA IDE.</p>
+  <!--<p><em>2015. 06. 12. 20:31 UTC+2 idő szerint az eagle és palfynux csomagok aláírás alatt állnak, tehát nem telepíthetők még.</em></p>-->
+  <footer>
+    <hr>
+    Powered by lighttpd
+  </footer>
+
+
+</body></html>
