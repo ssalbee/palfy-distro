@@ -1,0 +1,13 @@
+pkgname=palfynux
+pkgver=indev6
+pkgrel=1
+pkgdesc="Palfynux Base Package"
+arch=('any')
+url="https://github.com/ssalbee/palfy-distro"
+license=('GPL')
+install=palfynux.install
+depends=('libreoffice-still' 'evince' 'codeblocks' 'python' 'fritzing' 'arduino' 'chromium' 'putty' 'vlc' 'iverilog' 'kicad' 'eagle' 'lightdm' 'lxde-common' 'lxsession' 'lxpanel' 'openbox' 'lxlauncher' 'lxde-icon-theme' 'lxmenu-data' 'lxtask' 'lxrandr' 'pcmanfm' 'mc' 'openssh' 'xorg-server' 'lightdm-gtk-greeter' 'xf86-video-vesa' 'xf86-video-vmware' 'sudo')
+
+package() {
+ true
+}
