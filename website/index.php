@@ -23,6 +23,29 @@
     <p>
       A Palfynux egy Arch Linux alapú Linux disztribúció. Tartalmazza az LXDE asztali felületet, a LibreOffice irodai csomagot, a Code::Blocks és Arduino integrált fejlesztői környezetet, a Chromium böngészőt, valamint a KiCAD, Eagle, Verilog és Fritzing szoftvereket.
     </p>
+    <p>
+      <h2>Csomagok</h2>
+      <?php
+        error_reporting(E_ALL);
+        echo("<table border=\"1\"><tbody><tr><td>Csomag</td><td>Verzió</td></tr>");
+        $out = explode(" ", str_replace(" [installed]", "", str_replace("\n", " ", shell_exec("pacman -Sl palfynux"))));
+        echo("<tr>");
+        for($i = 0; $i < count($out); $i++)
+        {
+          if($i % 3 == 0)
+          {
+            if($i != 0)
+            {
+              echo("</tr>");
+            }
+            continue;
+          }
+          echo("<td>" . $out[$i] . "</td>");
+
+        }
+        echo("</tbody></table>");
+      ?>
+    </p>
   </main>
   <footer>
     <hr>
