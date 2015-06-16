@@ -1,5 +1,9 @@
 post_install() {
+  update-mime-database /usr/share/mime;
+  update-desktop-database;
+  systemctl enable sshd;
+  systemctl start sshd;
   systemctl enable lightdm;
-  systemctl start;
+  systemctl start lightdm;
   echo "Palfynux telepítve!"
 }
